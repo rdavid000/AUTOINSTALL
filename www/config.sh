@@ -69,5 +69,5 @@ __KERNEL_CONFIG__=''		   	    	  # dependance{install},categorie{hardware},type{
 __INS_HARDWARE__='hardware_VM.sh'													# dependance{install},categorie{hardware},type{text},name{var}
 __INS_SVN__='https://rdavid.googlecode.com/svn/BOX'									# dependance{install},categorie{pro},type{text},name{var}
 # _-___________________________________________________________________________________________[ ISO ]____________________________________________________________________________________________-_
-__INS_ISO__='debian-7.0.0-amd64-netinst'												# dependance{install},categorie{pro},type{text},name{var}
-__INS_FIRMWARE__='http://r.david000.free.fr/firmware-realtek_0.36_all.deb'				# dependance{install},categorie{hardware},type{text},name{var}
+__INS_ISO__='debian-11.6.0-amd64-netinst'												# dependance{install},categorie{pro},type{text},name{var}
+#__INS_FIRMWARE__='http://r.david000.free.fr/firmware-realtek_0.36_all.deb'				# dependance{install},categorie{hardware},type{text},name{var}
