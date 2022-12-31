@@ -1,5 +1,6 @@
 <?php
-$handle = fopen("./config.sh", 'r');
+$version='1.0';
+$handle = fopen("$version/install.conf", 'r');
 if ($handle)
 {
 	$temp='';
@@ -64,11 +65,12 @@ while ($i > 0) {
 	$i--;
 }
 if ($i==0) {
-	$temp='ID-'.rand(0,9999999999999999);
+	$temp=$version.'-'.rand(0,9999999999999999);
 	mkdir($temp);
-	$handle = fopen("$temp/config.sh", 'x+');
-	fwrite($handle, '__ISO_ID__=\''.$temp."'\n");
-	fwrite($handle, '__ISO_HOSTNAME__=\''.$_SERVER['HTTP_HOST']."'\n");
+	$handle = fopen("$temp/install.conf", 'x+');
+	fwrite($handle, '__VERSION__=\''.$version."'\n");
+	fwrite($handle, '__ISO_GENERATOR_CONF_ID__=\''.$temp."'\n");
+	fwrite($handle, '__INS_INSTALL_HTTP_HOST__=\''.$_SERVER['HTTP_HOST']."'\n");
 	while ($i != $k) {
 		$i=$i+1;
 		fwrite($handle, $var[$i].'='.$_POST[$var[$i]]."\n");

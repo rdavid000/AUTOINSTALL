@@ -1,7 +1,7 @@
 FROM debian
 ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update -yq
-RUN apt-get install git apache2 php php-curl sudo rsync genisoimage wget -yq
+RUN apt-get install git apache2 php php-curl sudo rsync genisoimage wget cpio -yq
 RUN apt-get clean -y
 RUN useradd -s /bin/bash -m r2d2
 RUN echo 'r2d2:1234' | chpasswd
