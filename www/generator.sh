@@ -17,7 +17,7 @@ export http_proxy=$__ENV_NET_LINK_PROXY__
 export https_proxy=$__ENV_NET_LINK_PROXY__
 export ftp_proxy=$__ENV_NET_LINK_PROXY__
 mkdir loopdir isofiles workspace
-wget -O original.iso $__ISO_GENERATOR_LINK_ORIGNAL__
+wget -O original.iso http://miroir.univ-lorraine.fr/debian-cd/11.6.0/amd64/iso-cd/debian-11.6.0-amd64-netinst.iso
 mount -o loop original.iso loopdir
 rsync -v -a -H --exclude=TRANS.TBL loopdir/ isofiles/
 umount loopdir
