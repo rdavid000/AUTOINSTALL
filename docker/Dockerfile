@@ -9,9 +9,8 @@ RUN useradd -s /bin/bash -m r2d2
 RUN echo 'r2d2:1234' | chpasswd
 RUN echo 'root:1234' | chpasswd
 RUN git clone https://github.com/rdavid000/AUTOINSTALL.git
-RUN mv /AUTOINSTALL/ISOGENHOST/* /var/www/
+RUN mv /AUTOINSTALL/www/* /var/www/
 RUN chmod 777 /var/www -R
-RUN cd AUTOINSTALL
 RUN service sudo restart
 RUN service apache2 restart
 CMD /var/www/setup.sh
