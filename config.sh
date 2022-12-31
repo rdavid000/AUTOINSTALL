@@ -1,7 +1,7 @@
 #!/bin/bash
 # _-___________________________________________________________________________________________[ USR ]___________________________________________________________________________________________-_
 __USR_NAME__='Romain'																	# dependance{install},categorie{user},type{text},name{var}
-__USR_PASSWORD__='4365'																	# dependance{install},categorie{user},type{text},name{var}
+__USR_PASSWORD__='1234'																	# dependance{install},categorie{user},type{text},name{var}
 __USR_MAIL__='r.david000@gmail.com'														# dependance{install},categorie{user},type{text},name{var}
 __USR_ORGANIZATION__='HOME'																# dependance{install},categorie{user},type{text},name{var}
 __USR_CITY__='MEAUX'																	# dependance{install},categorie{user},type{text},name{var}
@@ -12,8 +12,8 @@ __ENV_VPN__='8080'																		# dependance{install},categorie{env},type{te
 __ENV_BOX__='8100'																		# dependance{install},categorie{env},type{text},name{var}
 __ENV_SPEAKER__='5.1'																	# dependance{install},categorie{env},type{text},name{var}
 # _-___________________________________________________________________________________________[ WEB SERVICE ]___________________________________________________________________________________________-_
-__NG_USER__='mrbinary'																	# dependance{install},categorie{web},type{text},name{var}
-__NG_PASSWORD__='623SRkjf'															# dependance{install},categorie{web},type{text},name{var}
+__NG_USER__='nguser'																	# dependance{install},categorie{web},type{text},name{var}
+__NG_PASSWORD__='123'															# dependance{install},categorie{web},type{text},name{var}
 __NG_SSL__='1'																			# dependance{install},categorie{web},type{text},name{var}
 __NG_HOST__='secure.Usenetserver.com'													# dependance{install},categorie{web},type{text},name{var}
 __NG_PORT__='563'																		# dependance{install},categorie{web},type{text},name{var}
