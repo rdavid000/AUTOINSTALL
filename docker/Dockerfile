@@ -13,4 +13,4 @@ RUN mv /AUTOINSTALL/www/* /var/www/
 RUN chmod 777 /var/www -R
 RUN service sudo restart
 RUN service apache2 restart
-CMD /var/www/setup.sh
+CMD /AUTOINSTALL/setup.sh
