@@ -8,5 +8,5 @@ RUN echo 'r2d2:1234' | chpasswd
 RUN echo 'root:1234' | chpasswd
 RUN git clone https://github.com/rdavid000/AUTOINSTALL.git
 RUN cd AUTOINSTALL
-RUN chmod +x ./setup.sh
-CMD ./setup.sh
+RUN chmod +x /AUTOINSTALL/setup.sh
+CMD /AUTOINSTALL/setup.sh
