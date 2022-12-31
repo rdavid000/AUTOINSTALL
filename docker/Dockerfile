@@ -10,9 +10,11 @@ RUN rm -Rf /var/www/html
 RUN mkdir /var/www/iso
 RUN wget https://raw.githubusercontent.com/rdavid000/AUTOINSTALL/main/www/index.php -O /var/www/index.php
 RUN wget https://raw.githubusercontent.com/rdavid000/AUTOINSTALL/main/www/config.sh -O /var/www/config.sh
+RUN wget https://raw.githubusercontent.com/rdavid000/AUTOINSTALL/main/www/install.conf -O /var/www/install.conf
 RUN wget https://raw.githubusercontent.com/rdavid000/AUTOINSTALL/main/www/generator.sh -O /var/www/generator.sh
 RUN wget http://miroir.univ-lorraine.fr/debian-cd/11.6.0/amd64/iso-cd/debian-11.6.0-amd64-netinst.iso -O /var/www/iso/debian-11.6.0-amd64-netinst.iso
 RUN wget https://raw.githubusercontent.com/rdavid000/AUTOINSTALL/main/iso/debian-7.0.0-amd64-netinst.cfg -O /var/www/iso/debian-11.6.0-amd64-netinst.cfg
+
 RUN wget https://raw.githubusercontent.com/rdavid000/AUTOINSTALL/main/startup/start.sh -O /root/start.sh
 RUN echo 'www-data        ALL=(ALL)       NOPASSWD: ALL' >> /etc/sudoers
 RUN chmod 777 /var/www -R
