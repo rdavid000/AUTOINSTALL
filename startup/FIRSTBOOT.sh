@@ -9,4 +9,6 @@ newgrp sudo
 sed -i 's/#*X11Forwarding.*/X11Forwarding yes/' /etc/ssh/sshd_config
 sed -i 's/#*X11UseLocalhost.*/X11UseLocalhost no/' /etc/ssh/sshd_config
 apt-get clean -yq
+rm /etc/systemd/system/default.target.wants/FIRSTBOOT.service
+rm /etc/systemd/system/FIRSTBOOT.service
 exit 0

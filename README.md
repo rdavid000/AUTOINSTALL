@@ -1,9 +1,9 @@
-# AUTOINSTALL *
+# AUTOINSTALL
 
 >>> A script for build your custom debian ISO
 
 This script will regenerate a debian iso "custom.iso" with your preseed and your firmware :
-- The Dockerfile is for install the host who will execute generator.sh. If you dont want use it run :
+- The Dockerfile is for install the host who will execute generator.sh. If you dont want use it, run :
 	- apt-get update -y
 	- apt-get install git rsync genisoimage wget cpio net-tools -y
 	- apt-get clean -yq
@@ -18,7 +18,7 @@ This script will regenerate a debian iso "custom.iso" with your preseed and your
 	- chmod +x -R AUTOINSTALL/isogenerator/
 	- ./generator.sh
 - Open custom.iso with 7zip and check your \install.amd\initrd.gz\initrd\preseed.cfg file and \firmware\ folder for your firmware.
-- If you see a file '/root/FIRSTBOOT_OK' then FIRSTBOOT.sh have been execute.
+- If you see a file '/root/FIRSTBOOT_OK' after you install a machine then FIRSTBOOT.sh have been execute.
 
 
 
