@@ -28,7 +28,7 @@ cd ../isofiles
 chmod u+w md5sum.txt
 md5sum `find -follow -type f` > md5sum.txt
 genisoimage -ocustom.iso -r -J -no-emul-boot -boot-load-size 4 -boot-info-table -b isolinux/isolinux.bin -c isolinux/boot.cat .
-mv custom.iso ../custom.iso
+mv custom.iso ../custom_$__INS_ISO__.iso
 cd ..
 rm -Rf iso loopdir isofiles workspace
 ) 2>&1 | tee -a $1/$0.log
