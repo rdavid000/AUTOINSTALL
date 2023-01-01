@@ -21,8 +21,8 @@ This script will regenerate a debian custom ISO with your preseed and your firmw
 - Run the generator :
 	- chmod +x -R AUTOINSTALL/isogenerator/
 	- ./generator.sh
-- Open custom.iso with 7zip and check your \install.amd\initrd.gz\initrd\preseed.cfg file and \firmware\ folder for your firmware.
-- If you see a file '/root/FIRSTBOOT_OK' after you install a machine then FIRSTBOOT.sh have been execute.
+- Open the custom ISO file with 7zip and check your \install.amd\initrd.gz\initrd\preseed.cfg file and \firmware\ folder for your firmware.
+- If you see a file '/root/FIRSTBOOT_OK' after you have install a machine then FIRSTBOOT.sh have been execute.
 
 
 

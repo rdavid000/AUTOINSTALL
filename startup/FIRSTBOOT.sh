@@ -11,4 +11,5 @@ sed -i 's/#*X11UseLocalhost.*/X11UseLocalhost no/' /etc/ssh/sshd_config
 apt-get clean -yq
 rm /etc/systemd/system/default.target.wants/FIRSTBOOT.service
 rm /etc/systemd/system/FIRSTBOOT.service
+systemctl daemon-reload
 exit 0
