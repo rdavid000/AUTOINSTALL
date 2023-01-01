@@ -1,4 +1,4 @@
-# AUTOINSTALL 
+# AUTOINSTALL *
 
 *>>> A script for build your custom debian ISO <<<
 
