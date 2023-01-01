@@ -1,5 +1,5 @@
 #!/bin/bash
-__SYS_HOSTNAME__='IGetPreseed'
+__SYS_HOSTNAME__='IAMPreseed'
 __SYS_DOMAIN__=''
 __SYS_PROXY__=''
 __SYS_PASSWORD__='1234'
