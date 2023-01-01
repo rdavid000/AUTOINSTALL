@@ -1,18 +1,10 @@
 #!/bin/bash
-(
-cd /root
-sleep 60
-chmod +x config.sh
-. config.sh
-echo "export no_proxy=$__ENV_PROXY__" > /etc/rc.local
-echo "export http_proxy=$__ENV_PROXY__" >> /etc/rc.local
-echo "export https_proxy=$__ENV_PROXY__" >> /etc/rc.local
-echo "export ftp_proxy=$__ENV_PROXY__" >> /etc/rc.local
-echo '/root/client/STEP_1.sh' >> /etc/rc.local
-echo 'exit 0' >> /etc/rc.local
-apt-get update
-apt-get -y install subversion
-svn checkout $__INS_SVN__/client/
-chmod 700 -R client
-) 2>&1 | tee -a $0.log
-reboot
+export DEBIAN_FRONTEND=noninteractive
+apt-get update -y
+apt-get install openssh-server sudo -y
+usermod -aG sudo r2d2
+newgrp sudo
+sed -i 's/#*X11Forwarding.*/X11Forwarding yes/' /etc/ssh/sshd_config
+sed -i 's/#*X11UseLocalhost.*/X11UseLocalhost no/' /etc/ssh/sshd_config
+apt-get clean -yq
+exit 0
