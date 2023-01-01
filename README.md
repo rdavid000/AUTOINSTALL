@@ -8,7 +8,7 @@ This script will regenerate a debian iso "custom.iso" with your preseed and your
 	- The FIRSTBOOT.sh will be execute at first boot. Check --SYS_PRESEED-- in config.sh
 	- The generator.sh will execute the config.sh file for replace --VARIABLE-- in the preseed
 - Dont miss a chmod +x -R isogenerator/ before run it
-- Open custom.iso with 7zip and check your \install.amd\initrd.gz\initrd\preseed.cfg file
+- Open custom.iso with 7zip and check your \install.amd\initrd.gz\initrd\preseed.cfg file and \firmware\ folder for your firmware
 
 
 
