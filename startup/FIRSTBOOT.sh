@@ -8,8 +8,8 @@ usermod -aG sudo r2d2
 newgrp sudo
 sed -i 's/#*X11Forwarding.*/X11Forwarding yes/' /etc/ssh/sshd_config
 sed -i 's/#*X11UseLocalhost.*/X11UseLocalhost no/' /etc/ssh/sshd_config
-apt-get clean -yq
 rm /etc/systemd/system/default.target.wants/FIRSTBOOT.service
 rm /etc/systemd/system/FIRSTBOOT.service
+apt-get clean -yq
 systemctl daemon-reload
 exit 0
