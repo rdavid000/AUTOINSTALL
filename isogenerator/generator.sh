@@ -21,7 +21,7 @@ chmod u+w isofiles
 cd workspace
 gzip -d < ../isofiles/install.amd/initrd.gz | cpio --extract --verbose --make-directories --no-absolute-filenames
 cp ../../iso/$__INS_ISO__.cfg preseed.cfg
-#Config 'preseed.cfg' '../config.sh'
+Config 'preseed.cfg' '../config.sh'
 wget --directory-prefix=../isofiles/firmware $__INS_FIRMWARE__
 su -c 'find . | cpio -H newc --create --verbose | gzip -9 > ../isofiles/install.amd/initrd.gz'
 cd ../isofiles
