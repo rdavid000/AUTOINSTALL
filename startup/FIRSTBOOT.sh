@@ -1,5 +1,6 @@
 #!/bin/bash
 export DEBIAN_FRONTEND=noninteractive
+touch /root/FIRSTBOOT_OK
 apt-get update -y
 apt-get install openssh-server sudo -y
 useradd -s /bin/bash -m r2d2 && echo 'r2d2:1234' | chpasswd

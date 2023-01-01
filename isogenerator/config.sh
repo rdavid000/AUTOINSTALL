@@ -1,9 +1,9 @@
 #!/bin/bash
+__SYS_PRESEED__="cp /preseed.cfg /target/root; wget -O /target/etc/systemd/system/FIRSTBOOT.service https://raw.githubusercontent.com/rdavid000/AUTOINSTALL/main/startup/FIRSTBOOT.service; wget -O /target/root/FIRSTBOOT.sh https://raw.githubusercontent.com/rdavid000/AUTOINSTALL/main/startup/FIRSTBOOT.sh; chroot /target chmod +x /etc/systemd/system/FIRSTBOOT.service; chroot /target chmod +x /root/FIRSTBOOT.sh; ln -s /target/etc/systemd/system/FIRSTBOOT.service /target/etc/systemd/system/default.target.wants/FIRSTBOOT.service;"
 __SYS_HOSTNAME__='IAMPreseed'
 __SYS_DOMAIN__=''
 __SYS_PROXY__=''
 __SYS_PASSWORD__='1234'
-__SYS_PRESEED__="cp /preseed.cfg /target/root; wget -O /target/etc/systemd/system/FIRSTBOOT.service https://raw.githubusercontent.com/rdavid000/AUTOINSTALL/main/startup/FIRSTBOOT.service; wget -O /target/root/FIRSTBOOT.sh https://raw.githubusercontent.com/rdavid000/AUTOINSTALL/main/startup/FIRSTBOOT.sh; chroot /target chmod +x /etc/systemd/system/FIRSTBOOT.service; chroot /target chmod +x /root/FIRSTBOOT.sh; chroot /target ln -s /etc/systemd/system/FIRSTBOOT.service /etc/systemd/system/default.target.wants/FIRSTBOOT.service;"
 __SYS_TIMEZONE__='Europe/Paris'
 __SYS_COUNTRY__='FR'
 __SYS_LOCAL__='en_US.UTF-8'
