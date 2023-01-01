@@ -3,7 +3,10 @@
 >>> A script for build your custom debian ISO
 
 This script will regenerate a debian custom ISO with your preseed and your firmware :
-- The Dockerfile is for install the host who will execute generator.sh. If you dont want use it, run :
+- The Dockerfile is for install the host who will execute generator.sh.
+	- docker build https://github.com/rdavid000/AUTOINSTALL.git#main:docker -t debian:ISOGenerator
+	- sudo docker run --name ISOGenerator --tty --interactive --network bridge -p 4444:22 debian:ISOGenerator
+- If you dont want use docker, run :
 	- apt-get update -y
 	- apt-get install git rsync genisoimage wget cpio net-tools -y
 	- apt-get clean -yq
