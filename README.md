@@ -1,5 +1,5 @@
 # AUTOINSTALL
-This script will regenerate a debian iso with your preseed :
+This script will regenerate a debian iso "custom.iso" with your preseed and your firmware :
 
 - The Dockerfile is for install the host who will execute generator.sh
 - Put your iso you want custom in the iso folder and rename the .cfg with the same name
