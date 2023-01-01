@@ -1,0 +1,7 @@
+[Unit]
+Description=FIRSTBOOT
+After=default.target
+[Service]
+ExecStart=/root/FIRSTBOOT.sh
+[Install]
+WantedBy=default.target
