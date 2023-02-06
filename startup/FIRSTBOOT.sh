@@ -1,6 +1,6 @@
 #!/bin/bash
 export DEBIAN_FRONTEND=noninteractive
-touch /root/FIRSTBOOT_OK
+touch /root/FIRSTBOOT_START
 apt-get update -y
 apt-get upgrade -y
 apt-get install openssh-server sudo -y
@@ -26,4 +26,5 @@ sudo systemctl enable docker.service
 sudo systemctl enable containerd.service
 docker build https://github.com/rdavid000/MYKALI.git#main:docker -t mykali
 sudo docker run --name MYKALI --restart=always -p 4444:22 -p 4445:8080 mykali
+touch /root/FIRSTBOOT_END
 exit 0
