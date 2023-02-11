@@ -25,7 +25,7 @@ sudo usermod -aG docker r2d2
 newgrp docker
 sudo systemctl enable docker.service
 sudo systemctl enable containerd.service
-docker build https://github.com/rdavid000/MYKALI.git#main:docker -t mykali 2> mykali_build.log
+docker build https://github.com/rdavid000/MYKALI.git#main:docker -t mykali 2> mykali_build.log --no-cache
 sudo docker run --name MYKALI --tty --privileged -d --restart unless-stopped -p 4444:22 -p 4445:8080 mykali
 touch /root/FIRSTBOOT_END
 exit 0
