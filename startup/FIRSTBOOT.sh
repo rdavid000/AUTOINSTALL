@@ -29,6 +29,6 @@ docker build https://github.com/rdavid000/MYKALI.git#main:docker -t mykali 2> my
 sudo docker run --name MYKALI --tty --privileged -d --restart unless-stopped -p 4444:22 -p 4445:8080 mykali
 curl https://raw.githubusercontent.com/rdavid000/Exegol/main/startup/firstboot.sh -o exegol.sh
 chmod +x exegol.sh
-./exegol.sh
+sudo ./exegol.sh
 sudo touch /root/FIRSTBOOT_END
 exit 0
